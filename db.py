@@ -9,7 +9,8 @@ try:
         user=input("Enter username: "),
         password=getpass("Enter password: "),
     ) as connection:
-        create_db_query = "CREATE DATABASE deck_colors"
+        create_db_query = "CREATE DATABASE deck_builder"
+        #("CREATE TABLE deck_colors (deckID int PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), colors smallint UNSIGNED")
         with connection.cursor() as cursor:
             cursor.execute(create_db_query)
         #print(connection)
